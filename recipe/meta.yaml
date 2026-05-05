@@ -1,5 +1,5 @@
 {% set name = "langchain-classic" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 {% set build = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain_classic-{{ version }}.tar.gz
-  sha256: 33c2c0d8483ce7523e81b7e9107459a666497b39ad1018d7e635999b790e52c6
+  sha256: 5e9daa0bbc8af92b53343909162f35c6d321eed61bfc8ed6135919ff103510eb
 
 build:
   number: {{ build+100 if python_min == "3.10" else build }}
