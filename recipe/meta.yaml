@@ -11,7 +11,7 @@ source:
   sha256: 770902e38ffec85bf74b80616ea536265f439aed1c918e3fe2b8b4c0ca7a29aa
 
 build:
-  number: {{ build+100 if python_min == "3.10" else build }}
+  number: {{ build }}
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -22,19 +22,13 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - langchain-core >=1.4.4,<2.0.0
+    - langchain-core >=1.4.7,<2.0.0
     - langchain-text-splitters >=1.1.2,<2.0.0
-    - langsmith >=0.1.17,<1.0.0
+    - langsmith >=0.14.4,<1.0.0
     - pydantic >=2.7.4,<3.0.0
     - sqlalchemy >=1.4.0,<3.0.0
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3.0,<7.0.0
-{% if python_min == "3.10" %}
-    - python >=3.10,<3.11
-    - async-timeout >=4.0.0,<5.0.0
-{% else %}
-    - python >={{ python_min }}
-{% endif %}
 
 test:
   imports:
