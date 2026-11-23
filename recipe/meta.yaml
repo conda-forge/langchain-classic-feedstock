@@ -1,5 +1,5 @@
 {% set name = "langchain-classic" %}
-{% set version = "1.0.8" %}
+{% set version = "1.1.0" %}
 {% set build = 0 %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/8d/65/6b5e8a7ff2f2968652c88a67dcecb925b9d8f0a0ce9458c76cd5a0dbd138/langchain_classic-{{ version }}.tar.gz
-  sha256: ada0cc341a8a5b80fb24d73bdfaaeb849056ee2d8a41cc468355163fd3667484
+  url: https://files.pythonhosted.org/packages/dd/2c/6f6ed6acd89f1d1acdb429c2fad4a99cf8788e9020cd0b6deec190797788/langchain_classic-{{ version }}.tar.gz
+  sha256: 770902e38ffec85bf74b80616ea536265f439aed1c918e3fe2b8b4c0ca7a29aa
 
 build:
   number: {{ build+100 if python_min == "3.10" else build }}
